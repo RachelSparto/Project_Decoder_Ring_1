@@ -1,6 +1,6 @@
 // Write your tests here!
 //import ceaser
-const caesar = require("../src/caesar.js");
+const caesar = require("../src/caesar.js").caesar;
 
 const expect = require("chai").expect;
 describe("Caesar", () => {
