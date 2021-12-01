@@ -14,4 +14,9 @@ describe("Caesar", () => {
     expect(thirdCase).to.be.false;
     expect(fourthCase).to.be.false;
   });
+  it("It ignores capital letters", () => {
+    const actual = caesar("Abc", 1);
+    const expected = "bcd";
+    expect(actual).to.eql(expected);
+  });
 });
