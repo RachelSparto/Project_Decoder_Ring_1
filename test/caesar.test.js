@@ -19,4 +19,9 @@ describe("Caesar", () => {
     const expected = "bcd";
     expect(actual).to.eql(expected);
   });
+  it("When encoding, it handles shifts that go past the end of the alphabet", () => {
+    const actual = caesar("abc", -1);
+    const expected = "zab";
+    expect(actual).to.eql(expected);
+  });
 });
