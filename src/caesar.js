@@ -7,7 +7,52 @@ const caesarModule = (function () {
   // you can add any code you want within this function scope
 
   function caesar(input, shift, encode = true) {
-    if (shift === 0 || shift < -25 || shift > 25 || !shift) return false;
+    //make a variable to hold the alphabet, to make the string lowercase and for end result
+    const str = input.toLowercase;
+    let result = "";
+    const alphabet = [
+      "a",
+      "b",
+      "c",
+      "d",
+      "e",
+      "f",
+      "g",
+      "h",
+      "i",
+      "j",
+      "k",
+      "l",
+      "m",
+      "n",
+      "o",
+      "p",
+      "q",
+      "r",
+      "s",
+      "t",
+      "u",
+      "v",
+      "w",
+      "x",
+      "y",
+      "z",
+    ];
+    //if statement to determine if the shift number is accepted
+    if (shift === 0 || shift < -25 || shift > 25 || !shift) {
+      return false;
+    }
+    //loop through the string
+
+      //add characters that are not included in alphabet
+
+      //find the index of all characters in the alphabet array
+
+      //apply the shift to the the characters found in the alphabet
+      //declare if we are encoding or decoding the string
+      //handle if the shift goes past the beginning or end of the alphabet array
+    }
+    return result;
   }
 
   return {
@@ -16,3 +61,4 @@ const caesarModule = (function () {
 })();
 
 module.exports = { caesar: caesarModule.caesar };
+caesarModule.caesar("test", 0);
