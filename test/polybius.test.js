@@ -15,4 +15,9 @@ describe("polybius", () => {
     const expected = "i/j";
     expect(actual).to.eql(expected);
   });
+  it("It ignores capital letters.", () => {
+    const actual = polybius("ABC");
+    const expected = "112131";
+    expect(actual).to.eql(expected);
+  });
 });
