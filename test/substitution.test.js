@@ -12,4 +12,8 @@ describe("substitution", () => {
     const expected = "bca";
     expect(actual).to.eql(expected);
   });
+  it("It returns false if there are any duplicate characters in the given alphabet.", () => {
+    const actual = substitution("abc", bcadefghijklmnoprrstuvwxyz);
+    expect(actual).to.be.false;
+  });
 });
