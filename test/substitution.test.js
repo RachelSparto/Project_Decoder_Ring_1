@@ -16,4 +16,9 @@ describe("substitution", () => {
     const actual = substitution("abc", bcadefghijklmnoprrstuvwxyz);
     expect(actual).to.be.false;
   });
+  it("It maintains spaces in the message, before and after encoding or decoding.", () => {
+    const actual = substitution("a b c", "bcadefghijklmnopqrstuvwxyz");
+    const expected = "b c a";
+    expect(actual).to.eql(expected);
+  });
 });
