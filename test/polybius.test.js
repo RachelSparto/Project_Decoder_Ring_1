@@ -10,4 +10,9 @@ describe("polybius", () => {
     expect(letterI).to.eql(expected);
     expect(letterJ).to.eql(expected);
   });
+  it("When decoding, it translates 42 to (i/j)", () => {
+    const actual = polybius("42", false);
+    const expected = "i/j";
+    expect(actual).to.eql(expected);
+  });
 });
