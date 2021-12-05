@@ -25,8 +25,8 @@ describe("Caesar", () => {
     expect(actual).to.eql(expected);
   });
   it("It maintains spaces and other nonalphabetic symbols in the message, before and after encoding or decoding.", () => {
-    const actual = caesar("a b c!", 1);
-    const expected = "b c d!";
+    let actual = caesar("a b c!", 1);
+    let expected = "b c d!";
     expect(actual).to.eql(expected);
     actual = caesar("b c d!", 1, false);
     expected = "a b c!";
