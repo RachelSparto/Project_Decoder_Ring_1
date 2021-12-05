@@ -20,4 +20,9 @@ describe("polybius", () => {
     const expected = "112131";
     expect(actual).to.eql(expected);
   });
+  it("It maintains spaces in the message, before and after encoding or decoding", () => {
+    const actual = polybius("a b c");
+    const expected = "11 21 31";
+    expect(actual).to.eql(expected);
+  });
 });
