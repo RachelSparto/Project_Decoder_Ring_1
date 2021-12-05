@@ -21,4 +21,9 @@ describe("substitution", () => {
     const expected = "b c a";
     expect(actual).to.eql(expected);
   });
+  it("It ignores capital letters", () => {
+    const actual = substitution("ABC", "bcadefghijklmnopqrstuvwxyz");
+    const expected = "bca";
+    expect(actual).to.eql(expected);
+  });
 });
