@@ -58,7 +58,7 @@ const polybiusModule = (function () {
     for (let i = 0; i < input.length; i += 2) {
       const firstInput = input[i];
       const secondInput = input[i + 1];
-      // if the input charater id not a number 0-9 then keep it
+      // if the input character id not a number 0-9 then keep it
       if (!/[0-9]/.test(firstInput)) {
         output += firstInput;
         i--;

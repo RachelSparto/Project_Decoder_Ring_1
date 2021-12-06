@@ -13,7 +13,7 @@ describe("substitution", () => {
     expect(actual).to.eql(expected);
   });
   it("It returns false if there are any duplicate characters in the given alphabet.", () => {
-    const actual = substitution("abc", bcadefghijklmnoprrstuvwxyz);
+    const actual = substitution("abc", "bcadefghijklmnoprrstuvwxyz");
     expect(actual).to.be.false;
   });
   it("It maintains spaces in the message, before and after encoding or decoding.", () => {

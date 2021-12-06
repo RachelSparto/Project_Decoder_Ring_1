@@ -5,9 +5,36 @@
 
 const substitutionModule = (function () {
   // you can add any code you want within this function scope
+  const normAlphabet = "abcdefghijklmnopqrstuvwxyz";
 
   function substitution(input, alphabet, encode = true) {
-    // your solution code here
+    //return false if the alphabet is not 26 letters or alphabet missing
+    if (!alphabet || alphabet.length !== 26) return false;
+    //return false if there is a duplicate letter
+    for (let character of alphabet) {
+      if (alphabet.split(character).length - 1 > 1) return false;
+    }
+    // add variables for normal alphabet and input to lowercase
+    const inputLowerCase = input.toLowerCase();
+    let output = "";
+    //loop through the input
+    for (let character of inputLowerCase) {
+      //account for spacing and non letter characters
+      if (!alphabet.includes(character)) {
+        output += character;
+      } else {
+        //if encode else decode
+        if (encode === true) {
+          foundIndex = normAlphabet.indexOf(character);
+          output += alphabet[foundIndex];
+        } else {
+          // decode
+          foundIndex = alphabet.indexOf(character);
+          output += normAlphabet[foundIndex];
+        }
+      }
+    }
+    return output;
   }
 
   return {
